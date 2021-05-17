@@ -15,6 +15,16 @@ public class Produto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY ) // id autoincrement
 	private long id;
+	@NotNull 
+	@ Size ( min = 2, max = 20)
+	private String titulo; // nome do jogo
+	
+	@NotNull 
+	@ Size ( min = 10, max = 100)
+	private String descricao; 
+	
+	
+	private String preco;
 	
 	public long getId() {
 		return id;
@@ -40,23 +50,14 @@ public class Produto {
 		this.descricao = descricao;
 	}
 
-	public double getPreco() {
+	public String getPreco() {
 		return preco;
 	}
 
-	public void setPreco(double preco) {
+	public void setPreco(String preco) {
 		this.preco = preco;
 	}
 
-	@NotNull 
-	@ Size ( min = 5, max = 20)
-	private String titulo; // nome do jogo
-	
-	@NotNull 
-	@ Size ( min = 10, max = 100)
-	private String descricao; 
-	
-	@NotNull
-	private double preco;
+
 
 }

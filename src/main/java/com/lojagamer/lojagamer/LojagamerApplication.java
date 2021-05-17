@@ -8,6 +8,7 @@ public class LojagamerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LojagamerApplication.class, args);
+		System.out.println("Aplicação rodando");
 	}
 
 }
